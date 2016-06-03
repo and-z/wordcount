@@ -1,8 +1,20 @@
+buildscript {
+  ext.kotlin_version = '1.0.2'
+
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+  }
+}
+
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'kotlin'
 
 repositories {
-  mavenCentral()
+  jcenter()
 }
 
 dependencies {
@@ -11,4 +23,5 @@ dependencies {
   testCompile 'org.mockito:mockito-all:1.9.0'
   testCompile 'junit:junit:4.11'
   testCompile 'org.assertj:assertj-core:1.7.1'
+  compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
