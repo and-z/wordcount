@@ -10,9 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-  
+
   public static void main(String[] args) throws IOException {
     Map<String, Integer> counts = CounterKt.countWordsInFile(args[0]);
+//    Map<String, Integer> counts = getCounts(args[0]);
     System.out.println(counts);
   }
 
